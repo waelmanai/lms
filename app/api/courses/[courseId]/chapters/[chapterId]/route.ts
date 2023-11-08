@@ -72,7 +72,7 @@ export async function DELETE(
             }
         });
 
-        if (!publishedChaptersInCourse) {
+        if (!publishedChaptersInCourse.length) {
             await db.course.update({
                 where: {
                     id: params.courseId,
